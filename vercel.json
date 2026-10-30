@@ -1,0 +1,122 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/about-us",
+      "destination": "/about-us.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing.html"
+    },
+    {
+      "source": "/trading-and-demat-with-mor",
+      "destination": "/trading-and-demat-with-mor.html"
+    },
+    {
+      "source": "/reference_documents",
+      "destination": "/reference_documents.html"
+    },
+    {
+      "source": "/disclaimer",
+      "destination": "/disclaimer.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms-and-conditions.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/faqs",
+      "destination": "/#faq",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf",
+      "destination": "/reference_documents",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf/investor-charter-broking",
+      "destination": "/reference_documents/pdf/investor-charter-broking.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf/investor-charter-investment-advisors",
+      "destination": "/reference_documents/pdf/investor-charter-investment-advisors.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf/investor-charter-depository-participants",
+      "destination": "/reference_documents/pdf/investor-charter-depository-participants.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf/gtc-gtt-client-policy",
+      "destination": "/reference_documents/pdf/gtc-gtt-client-policy.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf/policy-voluntary-freezing",
+      "destination": "/reference_documents/pdf/policy-voluntary-freezing.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/reference_documents/pdf/process-voluntary-freezing",
+      "destination": "/reference_documents/pdf/process-voluntary-freezing.pdf",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/reference_documents/pdf/(.*)\\.pdf",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
+}

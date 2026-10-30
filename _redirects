@@ -1,0 +1,15 @@
+# Netlify and Cloudflare Pages. Every page has a real address and its own file (about-us.html -> /about-us), which both
+# hosts serve without the extension. Only retired or moved addresses need a rule.
+
+# The old FAQ page: the FAQ is now a section of the home page.
+/faqs                          /#faq                    301
+# The old PDF folder address listed the documents.
+/reference_documents/pdf       /reference_documents     301
+
+# The reference PDFs: the old addresses had no .pdf extension; the files are stored with one so every host serves them as PDFs.
+/reference_documents/pdf/investor-charter-broking  /reference_documents/pdf/investor-charter-broking.pdf  301
+/reference_documents/pdf/investor-charter-investment-advisors  /reference_documents/pdf/investor-charter-investment-advisors.pdf  301
+/reference_documents/pdf/investor-charter-depository-participants  /reference_documents/pdf/investor-charter-depository-participants.pdf  301
+/reference_documents/pdf/gtc-gtt-client-policy  /reference_documents/pdf/gtc-gtt-client-policy.pdf  301
+/reference_documents/pdf/policy-voluntary-freezing  /reference_documents/pdf/policy-voluntary-freezing.pdf  301
+/reference_documents/pdf/process-voluntary-freezing  /reference_documents/pdf/process-voluntary-freezing.pdf  301
